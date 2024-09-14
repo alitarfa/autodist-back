@@ -13,8 +13,7 @@ import {
 @ApiTags('users')
 @Controller('/api/v1/users')
 export class UserController {
-  constructor(private readonly userService: UserService) {
-  }
+  constructor(private readonly userService: UserService) {}
 
   @Post()
   @ApiOperation({ summary: 'Create new user' })
