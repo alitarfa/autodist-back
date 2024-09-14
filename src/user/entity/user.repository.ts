@@ -14,10 +14,6 @@ export class UserRepository {
   }
 
   async findById(id: string) {
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-      console.log('Wooow');
-      return;
-    }
     return this.userModel.findById(new Types.ObjectId(id));
   }
 

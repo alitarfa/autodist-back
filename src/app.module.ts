@@ -9,7 +9,7 @@ import { User, UserSchema } from './user/entity/user.entity';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://root:example@localhost:27017', {
+    MongooseModule.forRoot('mongodb://root:example@mongo:27017', {
       dbName: 'autodist_db',
     }),
     MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),

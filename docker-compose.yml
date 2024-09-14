@@ -12,6 +12,14 @@ services:
     volumes:
       - mongo_data:/data/db
 
+  autodist-app:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - mongo
 volumes:
   mongo_data:
     driver: local

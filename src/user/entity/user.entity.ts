@@ -3,7 +3,6 @@ import { Document } from 'mongoose';
 
 @Schema()
 export class User extends Document {
-// TODO fix getter and setter
   public _id: string;
 
   @Prop({ required: true })
