@@ -11,8 +11,6 @@ RUN npm run build
 
 FROM node:18-alpine AS runner
 
-ENV NODE_ENV=production
-
 WORKDIR /app
 
 COPY --from=builder /app/dist ./dist

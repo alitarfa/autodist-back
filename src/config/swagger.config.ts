@@ -7,7 +7,6 @@ export class SwaggerConfig {
       .setTitle('Auto Distribution')
       .setDescription('User management API')
       .setVersion('1.0')
-      .addTag('User')
       .build();
     return SwaggerModule.createDocument(app, config);
   }
