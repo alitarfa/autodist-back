@@ -9,7 +9,7 @@ export class UserRepository {
   }
 
   async create(user: User) {
-    return new this.userModel(user).save();
+    return this.userModel.create(user);
   }
 
   async findById(id: string) {
